@@ -1,7 +1,7 @@
-ervices:
-  app:
+services:
+  backend:
     build:
-      dockerfile: ./Dockerfile
+      dockerfile: ./docker/backend/Dockerfile
     volumes:
       - ./backend:/opt
     ports:

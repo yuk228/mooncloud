@@ -1,0 +1,10 @@
+FROM mcr.microsoft.com/devcontainers/python:3.12-bookworm
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+
+WORKDIR /repo/backend
+
+COPY ./backend /repo/backend
+
+RUN uv sync --frozen --no-cache
+
+CMD ["uv", "run", "main.py", "dev"]
