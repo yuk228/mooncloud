@@ -1,0 +1,15 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: ./docker/backend/Dockerfile.devcontainer
+    volumes:
+      - ./:/repo
+    ports:
+      - "8000:8000"
+    command: ["sleep", "infinity"]
+    tty: true
+
+volumes:
+  backend_vscode_server:
+  frontend_vscode_server:
