@@ -1,7 +1,7 @@
-FROM node:18-alpine
+FROM node:20-slim 
 
 WORKDIR /app
-COPY . /app
+COPY ./frontend /app
 
 RUN npm install
 
