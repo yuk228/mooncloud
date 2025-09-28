@@ -2,8 +2,9 @@ FROM node:20-slim
 RUN corepack enable
 
 WORKDIR /app
-COPY ./frontend /app
+COPY ./frontend/pnpm-lock.yaml ./frontend/package.json ./frontend/pnpm-workspace.yaml* ./
+RUN pnpm install --frozen-lockfile
 
-RUN pnpm install
+COPY ./frontend ./app
 
 CMD pnpm run dev

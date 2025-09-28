@@ -2,9 +2,8 @@ FROM node:20-slim
 RUN corepack enable
 
 WORKDIR /repo/frontend
+COPY ./frontend/pnpm-lock.yaml ./forntend/package.json ./forntend/pnpm-workspace.yaml* ./
+RUN pnpm install --frozen-lockfile
 
 COPY . /repo
-
-RUN pnpm install
-
 CMD pnpm run dev
