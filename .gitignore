@@ -162,6 +162,14 @@ backend/ipython_config.py
 # SHARED / GLOBAL
 # ============================================
 
+# Environment variables (root level)
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
 # OS generated files
 .DS_Store
 .DS_Store?
