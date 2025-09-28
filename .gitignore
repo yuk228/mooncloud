@@ -10,6 +10,7 @@ frontend/.yarn/install-state.gz
 frontend/.yarn/cache
 frontend/.yarn/unplugged
 frontend/.yarn/build-state.yml
+frontend/.pnpm-store
 
 # Next.js
 frontend/.next/

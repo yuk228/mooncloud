@@ -1,9 +1,10 @@
 FROM node:20-slim 
+RUN corepack enable
 
 WORKDIR /repo/frontend
 
 COPY . /repo
 
-RUN npm install
+RUN pnpm install
 
-CMD npm run dev
+CMD pnpm run dev

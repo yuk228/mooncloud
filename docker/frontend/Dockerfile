@@ -1,8 +1,9 @@
 FROM node:20-slim 
+RUN corepack enable
 
 WORKDIR /app
 COPY ./frontend /app
 
-RUN npm install
+RUN pnpm install
 
-CMD npm run dev
+CMD pnpm run dev
