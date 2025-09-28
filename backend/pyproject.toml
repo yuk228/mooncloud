@@ -5,8 +5,8 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "fastapi",
-    "uvicorn",
-    "prisma",
-    "python-dotenv",
+    "sqlalchemy>=2.0.43",
+    "python-dotenv>=1.1.1",
+    "fastapi>=0.117.1",
+    "uvicorn>=0.37.0",
 ]
